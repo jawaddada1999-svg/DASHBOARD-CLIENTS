@@ -1,0 +1,150 @@
+@import "tailwindcss";
+
+:root {
+  --agency-primary: #0B3B4E;
+  --agency-primary-hover: #082D3C;
+  --agency-primary-soft: rgba(11, 59, 78, 0.08);
+  --agency-accent: #EA580C;
+  --agency-accent-hover: #C2410C;
+  --agency-accent-soft: rgba(234, 88, 12, 0.10);
+}
+
+html {
+  font-size: 14.5px;
+  font-family: 'IBM Plex Sans Arabic', 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  color: #09090B;
+}
+
+html[dir="ltr"] {
+  font-family: 'Plus Jakarta Sans', 'DM Sans', 'IBM Plex Sans Arabic', system-ui, -apple-system, sans-serif;
+}
+
+/* Crisp, modern, understated display typography in high-contrast black */
+h1, h2, h3, h4, .font-display {
+  font-family: 'IBM Plex Sans Arabic', 'DM Sans', system-ui, sans-serif;
+  letter-spacing: -0.015em;
+  text-wrap: balance;
+  color: #09090B;
+}
+
+html[dir="ltr"] h1,
+html[dir="ltr"] h2,
+html[dir="ltr"] h3,
+html[dir="ltr"] h4,
+html[dir="ltr"] .font-display {
+  font-family: 'DM Sans', 'Plus Jakarta Sans', system-ui, sans-serif;
+}
+
+.font-extrabold {
+  font-weight: 700;
+}
+
+.font-mono-num {
+  font-family: 'IBM Plex Mono', 'IBM Plex Sans Arabic', monospace;
+  font-variant-numeric: tabular-nums;
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Clean, modern executive card surface */
+.card-surface {
+  box-shadow: 0 1px 3px rgba(9, 9, 11, 0.05), 0 1px 2px rgba(9, 9, 11, 0.03);
+}
+
+/* Sleek, modern, unmistakable button styles */
+.btn-primary {
+  background-color: var(--agency-primary);
+  color: #ffffff;
+  border: 1px solid rgba(9, 9, 11, 0.14);
+  box-shadow: 0 2px 6px rgba(9, 9, 11, 0.14), inset 0 1px 0 rgba(255, 255, 255, 0.18);
+  transition: transform 150ms ease, filter 150ms ease, box-shadow 150ms ease;
+}
+.btn-primary:hover:not(:disabled) {
+  filter: brightness(1.08);
+  box-shadow: 0 4px 10px rgba(9, 9, 11, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.22);
+}
+.btn-primary:active:not(:disabled) {
+  transform: translateY(1px);
+}
+
+.btn-accent {
+  background-color: var(--agency-accent);
+  color: #ffffff;
+  border: 1px solid rgba(154, 52, 18, 0.25);
+  box-shadow: 0 2px 6px rgba(234, 88, 12, 0.22), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  transition: transform 150ms ease, filter 150ms ease, box-shadow 150ms ease;
+}
+.btn-accent:hover:not(:disabled) {
+  filter: brightness(1.06);
+  box-shadow: 0 4px 12px rgba(234, 88, 12, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.25);
+}
+.btn-accent:active:not(:disabled) {
+  transform: translateY(1px);
+}
+
+.btn-secondary {
+  background-color: #F4F4F5;
+  color: #09090B;
+  border: 1px solid #D4D4D8;
+  box-shadow: 0 1px 2px rgba(9, 9, 11, 0.04);
+  transition: background-color 150ms ease, border-color 150ms ease, transform 150ms ease;
+}
+.btn-secondary:hover:not(:disabled) {
+  background-color: #E4E4E7;
+  border-color: #A1A1AA;
+}
+.btn-secondary:active:not(:disabled) {
+  transform: translateY(1px);
+}
+
+.btn-outline {
+  background-color: #ffffff;
+  color: #09090B;
+  border: 1px solid #D4D4D8;
+  box-shadow: 0 1px 2px rgba(9, 9, 11, 0.04);
+  transition: background-color 150ms ease, border-color 150ms ease, transform 150ms ease;
+}
+.btn-outline:hover:not(:disabled) {
+  background-color: #F4F4F5;
+  border-color: #18181B;
+}
+.btn-outline:active:not(:disabled) {
+  transform: translateY(1px);
+}
+
+/* Custom subtle scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(24, 24, 27, 0.2);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(24, 24, 27, 0.38);
+}
+
+@media print {
+  aside,
+  header,
+  .no-print {
+    display: none !important;
+  }
+  main {
+    padding: 0 !important;
+    margin: 0 !important;
+    overflow: visible !important;
+  }
+  body {
+    background: #ffffff !important;
+  }
+}
